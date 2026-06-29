@@ -15,22 +15,6 @@ st.set_page_config(page_title="Mofo Branco Completo", page_icon="🌱", layout="
 st.title("🌱 Detector de Mofo Branco - Completo")
 st.markdown("### 📸 Câmera + Upload + IA + Escala Juliatti et al. (2013)")
 st.markdown("---")
-# ===== LOGIN =====
-if 'autenticado' not in st.session_state:
-    st.session_state.autenticado = False
-
-if not st.session_state.autenticado:
-    st.title("🔐 Acesso Restrito")
-    usuario = st.text_input("Usuário")
-    senha = st.text_input("Senha", type="password")
-    
-    if st.button("Entrar"):
-        if usuario == "admin" and senha == "mofo2024":
-            st.session_state.autenticado = True
-            st.rerun()
-        else:
-            st.error("Usuário ou senha incorretos!")
-    st.stop()
 
 class EscalaJuliatti:
     def __init__(self):
